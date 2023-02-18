@@ -1,0 +1,59 @@
+.header {
+    width: 100%;
+    background-color: #222;
+    padding: 24px 0;
+
+}
+
+.header_container {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.header > a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header img {
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.header .logo_title {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+
+.header .logo_subtitle {
+    color: white;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
+
+.header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    list-style: none;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header nav ul li a:hover {
+    opacity: 90%;
+}

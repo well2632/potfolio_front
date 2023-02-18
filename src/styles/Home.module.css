@@ -1,0 +1,357 @@
+.page {
+    margin: auto;
+}
+
+.hero_banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 100px 0;
+    gap: 56px;
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.hero_banner_top {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.hero_banner h1 {
+    color: white;
+    font-size: 42px;
+    font-weight: 400;
+    white-space: pre-line;
+}
+
+.hero_banner p {
+    color: white;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+}
+
+.hero_buttons_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+
+.hero_banner .hero_button_1 {
+    color: white;
+    text-decoration: none;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(136, 0, 240);
+    padding: 16px;
+    border-radius: 4px;
+    transition: 150ms all;
+    cursor: pointer;
+}
+
+.hero_banner .hero_button_1:hover {
+    background-color: rgb(153, 20, 255);
+}
+
+.hero_banner .hero_button_2 {
+    color: white;
+    text-decoration: none;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 33, 196);
+    padding: 16px;
+    border-radius: 4px;
+    transition: 150ms all;
+    cursor: pointer;
+}
+
+.hero_banner .hero_button_2:hover {
+    background-color: rgb(255, 18, 192);
+
+}
+
+.hero_text_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.video_container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 380px;
+}
+
+.about_me {
+    width: 100%;
+    background-color: white;
+    padding: 100px 0;
+}
+
+.about_me_container {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.about_me .section_title, .testimonials .section_title  {
+    color: #222;
+}
+
+.section_title {
+    color: white;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+.about_me .content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 56px;
+}
+
+.about_me .content p {
+    line-height: 28px;
+    opacity: .9;
+}
+
+.section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.section_header_button, .button_projects {
+    color: white;
+    background-color: rgb(203 1 199);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 40px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: 150ms all;
+}
+
+.section_header_button:hover, .button_projects:hover {
+    background-color: rgb(144, 5, 213);
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 100px 0;
+}
+
+.list_projects {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.project_right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 32px;
+}
+
+.project_right  .project_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.project_left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+.project_left  .project_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.project_right  .project_content .project_content_text {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.project_left  .project_content .project_content_text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.project_content .project_content_text > h4 {
+    color: white;
+    font-size: 21px;
+    letter-spacing: -1px;
+    font-weight: 400;
+}
+
+.project_content .project_content_text > p {
+    color: white;
+}
+
+.project_content_button, .button_download  {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background-color: transparent;
+    font-weight: 300;
+    padding: 12px 40px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 150ms all;
+    cursor: pointer;
+}
+
+.project_content_button:hover, .button_download:hover {
+    background-color: white;
+    color: #222;
+}
+
+.project_img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.testimonials {
+    background-color: white;
+    padding: 100px 0;
+}
+
+.testimonials .testimonials_container {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.carousel_list {
+    padding: 24px;
+}
+
+.testimonial {
+    display: flex;
+    width: 95%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.testimonial_profile {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.testimonial_text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #222;
+}
+
+.testimonial_title {
+    font-size: 21px;
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+
+.testimonial_description {
+    height: 200px;
+    line-height: 24px;
+    font-weight: 400;
+    opacity: .9;
+    color: #222;
+}
+
+.testimonial_profile_text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.testimonial_profile_text .testimonial_profile_name {
+    font-weight: 600;
+}
+
+.testimonial_profile_text .testimonial_profile_description {
+    font-size: 14px;
+    color: #777;
+}
+
+.testimonial_profile img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 200px;
+    overflow: hidden;
+}
+
+.footer {
+    background-color:#050505;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    color: white;
+    padding: 80px 0;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+

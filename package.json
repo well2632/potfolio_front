@@ -1,0 +1,21 @@
+{
+  "name": "nextjs-landingpage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.6",
+    "downloadjs": "^1.4.7",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-multi-carousel": "^2.8.2",
+    "react-type-animation": "^2.1.2",
+    "sass": "^1.58.0"
+  }
+}

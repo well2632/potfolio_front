@@ -40,11 +40,12 @@ export default function Home({ homeInfo, cms }) {
                 </h1>
                 <p>{homeInfo.data.attributes.hero_descricao}</p>
                 <div className={styles.hero_buttons_container}>
-                  <Link className={styles.button_projects} href="#projetos">
+                  <Link className={`${styles.button}`} id={styles.projects} href="#projetos">
                     Acessar projetos
                   </Link>
                   <a
-                    className={styles.button_download}
+                    className={`${styles.button} ${styles.download}`}
+                    id={styles.download}
                     onClick={() =>
                       download(`${cms}${homeInfo.data.attributes.curriculo.data.attributes.url}`)
                     }

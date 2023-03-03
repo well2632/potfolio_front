@@ -12,7 +12,7 @@ export default function Header({ logo_src }) {
         <nav className={styles.menu}>
           <ul>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">Página inicial</Link>
             </li>
             <li>
               <Link href="/#sobre">Sobre</Link>

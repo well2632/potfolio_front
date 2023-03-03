@@ -15,14 +15,16 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   margin: auto;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 
 :root {
   --color-primary: rgb(203 1 199);
   --color-secondary: #A100ED;
-
-  --max-width: 1024px
+  --max-width: 1024px;
+  width: 100vw;
 }
 
 @media (prefers-color-scheme: dark) {

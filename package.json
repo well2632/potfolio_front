@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "npm run build && next export && mv out _static",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,6 +17,8 @@
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.2",
     "react-type-animation": "^2.1.2",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.2",
     "sass": "^1.58.0"
   }
 }

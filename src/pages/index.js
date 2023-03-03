@@ -19,7 +19,7 @@ export default function Home({ homeInfo, cms }) {
   return (
     <>
       <div>
-        <Header logo_src={`${cms}${homeInfo.data.attributes.logo.data.attributes.url}`} />
+        <Header />
         <div className={styles.page}>
           <div className={styles.hero_banner}>
             <div className={styles.hero_banner_top}>
@@ -74,9 +74,6 @@ export default function Home({ homeInfo, cms }) {
           <section id="projetos" className={styles.projects}>
             <div className={styles.section_header}>
               <h3 className={styles.section_title}>Projetos em destaque</h3>
-              <Link className={styles.section_header_button} href="#">
-                Ver todos
-              </Link>
             </div>
             <div className={styles.list_projects}>
               {homeInfo.data.attributes.projetos.map((element) => (
@@ -176,13 +173,6 @@ export async function getStaticProps() {
         "Content-Type": "application/json",
       },
     }
-  );
-
-  console.log(
-    home.data.attributes.hero_palavras_titulo.map((item) => ({
-      id: item.id,
-      palavra: item.palavra,
-    }))
   );
 
   return {

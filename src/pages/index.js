@@ -163,7 +163,7 @@ export default function Home({ homeInfo, cms }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const home = await fetcher(
     `${process.env.CMS_URL}/api/home?populate[0]=curriculo&populate[1]=avaliacaos.imagem&populate[2]=projetos.projeto.thumb&populate[3]=hero_palavras_titulo&populate[4]=logo`,
     {

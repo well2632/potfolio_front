@@ -47,7 +47,7 @@ export default function Home({ homeInfo, cms }) {
                     className={styles.button_download}
                     onClick={() =>
                       download(
-                        `http://127.0.0.1:1337${homeInfo.data.attributes.curriculo.data.attributes.url}`
+                        `http://${cms}${homeInfo.data.attributes.curriculo.data.attributes.url}`
                       )
                     }
                   >

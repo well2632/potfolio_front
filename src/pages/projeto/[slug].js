@@ -1,5 +1,6 @@
 import styles from "../../styles/Projeto.module.css";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { fetcher } from "@/lib/api";
 
@@ -29,6 +30,7 @@ export default function Post({ project, cms, content }) {
           )}
         </main>
       )}
+      <Footer />
     </div>
   );
 }

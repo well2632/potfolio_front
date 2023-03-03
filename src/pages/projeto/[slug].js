@@ -34,7 +34,7 @@ export default function Post({ project, cms, content }) {
 }
 
 export async function getServerSideProps(context) {
-  const project = await fetcher(`http://127.0.0.1:1337/api/projetos/${context.params.slug}`, {
+  const project = await fetcher(`${process.env.CMS_URL}/api/projetos/${context.params.slug}`, {
     method: "GET",
     headers: {
       Authorization: "Bearer " + process.env.API_TOKEN,

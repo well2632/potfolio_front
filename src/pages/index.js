@@ -165,7 +165,7 @@ export default function Home({ homeInfo, cms }) {
 
 export async function getStaticProps() {
   const home = await fetcher(
-    "http://127.0.0.1:1337/api/home?populate[0]=curriculo&populate[1]=avaliacaos.imagem&populate[2]=projetos.projeto.thumb&populate[3]=hero_palavras_titulo&populate[4]=logo",
+    `${process.env.CMS_URL}/api/home?populate[0]=curriculo&populate[1]=avaliacaos.imagem&populate[2]=projetos.projeto.thumb&populate[3]=hero_palavras_titulo&populate[4]=logo`,
     {
       method: "GET",
       headers: {

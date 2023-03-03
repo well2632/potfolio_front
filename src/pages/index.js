@@ -46,9 +46,7 @@ export default function Home({ homeInfo, cms }) {
                   <a
                     className={styles.button_download}
                     onClick={() =>
-                      download(
-                        `http://${cms}${homeInfo.data.attributes.curriculo.data.attributes.url}`
-                      )
+                      download(`${cms}${homeInfo.data.attributes.curriculo.data.attributes.url}`)
                     }
                   >
                     Baixar currículo

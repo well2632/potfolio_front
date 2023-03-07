@@ -26,20 +26,17 @@ export default function Home({ homeInfo, cms }) {
             <div className={styles.hero_banner_top}>
               <div className={styles.hero_text_container}>
                 <h1>
-                  {homeInfo.data.attributes.hero_prefixo_titulo}
+                  123
                   <TypeAnimation
-                    sequence={homeInfo.data.attributes.hero_palavras_titulo.reduce((acc, item) => {
-                      acc.push(item.palavra, 2000);
-                      return acc;
-                    }, [])}
-                    speed={50}
+                    sequence={["teste", 2000, "abcde", 2000]}
+                    speed={20}
                     wrapper="span"
                     cursor={false}
                     repeat={Infinity}
                     style={{ color: "#CB01C7" }}
                   />
                 </h1>
-                <p>{homeInfo.data.attributes.hero_descricao}</p>
+                <p>descricao</p>
                 <div className={styles.hero_buttons_container}>
                   <Link className={`${styles.button}`} id={styles.projects} href="#projetos">
                     Acessar projetos
@@ -47,9 +44,9 @@ export default function Home({ homeInfo, cms }) {
                   <a
                     className={`${styles.button} ${styles.download}`}
                     id={styles.download}
-                    onClick={() =>
-                      download(`${cms}${homeInfo.data.attributes.curriculo.data.attributes.url}`)
-                    }
+                    // onClick={() =>
+                    //   download(`${cms}${homeInfo.data.attributes.curriculo.data.attributes.url}`)
+                    // }
                   >
                     Baixar currículo
                   </a>
@@ -67,7 +64,7 @@ export default function Home({ homeInfo, cms }) {
             <div className={styles.about_me_container}>
               <h3 className={styles.section_title}>Sobre mim</h3>
               <div className={styles.content}>
-                <p>{homeInfo.data.attributes.sobre}</p>
+                <p>descricao sobre</p>
               </div>
             </div>
           </section>
@@ -75,72 +72,33 @@ export default function Home({ homeInfo, cms }) {
             <div className={styles.section_header}>
               <h3 className={styles.section_title}>Projetos em destaque</h3>
             </div>
-            <div className={styles.list_projects}>
-              {homeInfo.data.attributes.projetos.map((element) => (
-                <div
-                  className={
-                    element.lado === "esquerda" ? styles.project_left : styles.project_right
-                  }
-                >
-                  <img
-                    className={styles.project_img}
-                    src={`${cms}${element.projeto.data.attributes.thumb.data.attributes.url}`}
-                  ></img>
-                  <div className={styles.project_content}>
-                    <div className={styles.project_content_text}>
-                      <h4 className={styles.project_name}>
-                        {element.projeto.data.attributes.titulo}
-                      </h4>
-                      <p className={styles.project_resume}>
-                        {element.projeto.data.attributes.texto_resumido}
-                      </p>
-                    </div>
-                    <div>
-                      <Link
-                        className={styles.project_content_button}
-                        href={`/projeto/${element.projeto.data.attributes.slug}`}
-                      >
-                        Acessar
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <div className={styles.list_projects}></div>
           </section>
           <section id="feedback" className={styles.testimonials}>
             <div className={styles.testimonials_container}>
               <h3 className={styles.section_title}>Avaliações </h3>
               <div className={styles.content}>
                 <Slider className={styles.carousel_list} options={options}>
-                  {homeInfo.data.attributes.avaliacaos.data.map((element) => (
-                    <div className={styles.testimonial}>
-                      <div className={styles.testimonial_text}>
-                        <h4 className={styles.testimonial_title}>{element.attributes.titulo}</h4>
-                        <p className={styles.testimonial_description}>
-                          {element.attributes.mensagem}
-                        </p>
-                      </div>
-
-                      <div className={styles.testimonial_bottom_info}>
-                        <div className={styles.testimonial_profile}>
-                          <img
-                            src={`${cms}${element.attributes.imagem.data.attributes.url}`}
-                            alt="Foto Bruno, cliente 99freelas"
-                          />
-                          <div className={styles.testimonial_profile_text}>
-                            <span className={styles.testimonial_profile_name}>
-                              {element.attributes.autor}
-                            </span>
-                            <span className={styles.testimonial_profile_description}>
-                              {element.attributes.canal}
-                            </span>
-                          </div>
-                        </div>
-                        <div className={styles.testimonial_rating}></div>
-                      </div>
+                  <div className={styles.testimonial}>
+                    <div className={styles.testimonial_text}>
+                      <h4 className={styles.testimonial_title}>titulo</h4>
+                      <p className={styles.testimonial_description}>msg</p>
                     </div>
-                  ))}
+
+                    <div className={styles.testimonial_bottom_info}>
+                      <div className={styles.testimonial_profile}>
+                        {/* <img
+                          src={`${cms}${element.attributes.imagem.data.attributes.url}`}
+                          alt="Foto Bruno, cliente 99freelas"
+                        /> */}
+                        <div className={styles.testimonial_profile_text}>
+                          <span className={styles.testimonial_profile_name}>autor</span>
+                          <span className={styles.testimonial_profile_description}>99freelas</span>
+                        </div>
+                      </div>
+                      <div className={styles.testimonial_rating}></div>
+                    </div>
+                  </div>
                 </Slider>
               </div>
             </div>
@@ -150,24 +108,4 @@ export default function Home({ homeInfo, cms }) {
       </div>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  const home = await fetcher(
-    `${process.env.CMS_URL}/api/home?populate[0]=curriculo&populate[1]=avaliacaos.imagem&populate[2]=projetos.projeto.thumb&populate[3]=hero_palavras_titulo&populate[4]=logo`,
-    {
-      method: "GET",
-      headers: {
-        Authorization: "Bearer " + process.env.API_TOKEN,
-        "Content-Type": "application/json",
-      },
-    }
-  );
-
-  return {
-    props: {
-      homeInfo: home,
-      cms: process.env.CMS_URL,
-    },
-  };
 }

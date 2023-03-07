@@ -1,0 +1,20 @@
+.button {
+    height: 48px;
+    width: 200px;
+    border-radius: 4px;
+    font-size: var(--font-p);
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.button.primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.button.primary:hover {
+    background-color: var(--color-primary-hover);
+}

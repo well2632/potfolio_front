@@ -9,22 +9,13 @@ export default function Header({ logo_src }) {
         <Link href="/" className={styles.logo}>
           <img src="/logo.svg" />
         </Link>
-        <nav className={styles.menu}>
+        {/* <nav className={styles.menu}>
           <ul>
             <li>
-              <Link href="/">Página inicial</Link>
-            </li>
-            <li>
-              <Link href="/#sobre">Sobre</Link>
-            </li>
-            <li>
-              <Link href="/#projetos">Projetos</Link>
-            </li>
-            <li>
-              <Link href="/#contato">Contato</Link>
+              <Link href="/">Início</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </div>
     </header>
   );

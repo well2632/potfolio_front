@@ -1,0 +1,17 @@
+.hero {
+    text-align: center;
+    color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.hero h1 {
+    font-size: var(--font-h1);
+}
+
+.hero h2 {
+    font-size: var(--font-h2);
+}

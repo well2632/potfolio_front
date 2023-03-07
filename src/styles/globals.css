@@ -19,12 +19,53 @@ body {
   overflow-x: hidden;
 }
 
+body > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 
 :root {
-  --color-primary: rgb(203 1 199);
+  --color-primary: #1f57dc;
+  --color-primary-hover: #0c3cad;
   --color-secondary: #A100ED;
   --max-width: 1024px;
+  --font-h1: 40px;
+  --font-h2: 32px;
+  --font-h3: 24px;
+  --font-p: 16px;
+  --color-black: #222;
   width: 100vw;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: -0.8px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 32px;
+  letter-spacing: -0.6px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import styles from "./Hero.module.css";
+import download from "downloadjs";
 
 export default function Hero() {
   return (
@@ -19,6 +20,13 @@ export default function Hero() {
           text="Projetos"
           onClick={() => {
             console.log("teste");
+          }}
+        />
+        <Button
+          text="Currículo"
+          type="secondary"
+          onClick={() => {
+            download("/files/curriculo.pdf");
           }}
         />
       </div>

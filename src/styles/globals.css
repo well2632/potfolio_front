@@ -30,7 +30,8 @@ body > div {
 :root {
   --color-primary: #1f57dc;
   --color-primary-hover: #0c3cad;
-  --color-secondary: #A100ED;
+  --color-secondary: #1f57dc;
+  --color-secondary-hover: #1f58dc12;
   --max-width: 1024px;
   --font-h1: 40px;
   --font-h2: 32px;

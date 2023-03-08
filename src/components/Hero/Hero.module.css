@@ -15,3 +15,8 @@
 .hero h2 {
     font-size: var(--font-h2);
 }
+
+.hero_buttons {
+    display: flex;
+    gap: 24px;
+}

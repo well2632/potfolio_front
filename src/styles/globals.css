@@ -33,35 +33,42 @@ body > div {
   --color-secondary: #1f57dc;
   --color-secondary-hover: #1f58dc12;
   --max-width: 1024px;
-  --font-h1: 40px;
-  --font-h2: 32px;
-  --font-h3: 24px;
+  --font-h1: 39px;
+  --font-h2: 31px;
+  --font-h3: 25px;
+  --font-h4: 20px;
   --font-p: 16px;
   --color-black: #222;
   width: 100vw;
 }
 
 h1 {
-  font-size: 40px;
-  letter-spacing: -0.8px;
-  font-weight: 600;
+  font-size: var(--font-h1);
+  letter-spacing: -1px;
+  font-weight: 500;
+  color: var(--color-black);
+
 }
 
 h2 {
-  font-size: 32px;
+  font-size: var(--font-h2);
   letter-spacing: -0.6px;
   font-weight: 500;
+  color: var(--color-black);
 }
 
 h3 {
-  font-size: 24px;
+  font-size: var(--font-h3);
   letter-spacing: -0.2px;
   font-weight: 400;
+  color: var(--color-black);
+
 }
 
 h4 {
-  font-size: 20px;
+  font-size: var(--font-h4);
   font-weight: 400;
+  color: var(--color-black);
 }
 
 p {

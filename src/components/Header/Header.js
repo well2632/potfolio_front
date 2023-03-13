@@ -7,15 +7,25 @@ export default function Header({ logo_src }) {
     <header className={styles.header}>
       <div className={styles.header_container}>
         <Link href="/" className={styles.logo}>
-          <img src="/logo.svg" />
+          Welington Martins
         </Link>
-        {/* <nav className={styles.menu}>
-          <ul>
-            <li>
-              <Link href="/">Início</Link>
-            </li>
-          </ul>
-        </nav> */}
+        <ul className={styles.header_menu}>
+          <li>
+            <Link href="/" className={styles.header_menu_item}>
+              Inicio
+            </Link>
+          </li>
+          <li>
+            <Link href="/sobre" className={styles.header_menu_item}>
+              Sobre
+            </Link>
+          </li>
+          <li>
+            <Link href="/contato" className={styles.header_menu_item}>
+              Contato
+            </Link>
+          </li>
+        </ul>
       </div>
     </header>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button/Button";
 import styles from "./Hero.module.css";
 import download from "downloadjs";
@@ -7,20 +7,14 @@ export default function Hero() {
   return (
     <div className={styles.hero}>
       <h1>Construindo o futuro através da usabilidade</h1>
-      <h4>Ajudo empresas a construirem experiências melhores para os seus usuários</h4>
-      <video
-        src={"/videos/interacion-design.mp4"}
-        style={{ width: "400px", height: "400px" }}
-        autoPlay="autoplay"
-        muted="true"
-        loop
-      />
+      <p>Ajudo empresas a construirem experiências melhores para os seus usuários</p>
       <div className={styles.hero_buttons}>
         <Button
-          text="Projetos"
+          text="Contato"
           onClick={() => {
             console.log("teste");
           }}
+          data-aos="fade-up-right"
         />
         <Button
           text="Currículo"
@@ -28,6 +22,7 @@ export default function Hero() {
           onClick={() => {
             download("/files/curriculo.pdf");
           }}
+          data-aos="fade-up-left"
         />
       </div>
     </div>

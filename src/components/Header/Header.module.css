@@ -7,7 +7,7 @@
     padding: 1.2em 5em;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1280px;
     margin: auto;
@@ -34,8 +34,8 @@
     font-size: var(--font-p);
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .header_container {
       justify-content: center;
     }
-  }
+  } */

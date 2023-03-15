@@ -1,12 +1,10 @@
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header/Header";
-import Link from "next/link";
-import Slider from "@/components/Slider/Slider";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import DataPosts from "@/data/posts.json";
-import { useEffect } from "react";
 import Button from "@/components/Button/Button";
+import download from "downloadjs";
 
 export default function Home() {
   return (
@@ -31,7 +29,10 @@ export default function Home() {
                 </ul>
               </div>
               <div className={styles.project_content_buttons}>
-                <Button text="Acessar" />
+                <Button
+                  text="Visualizar"
+                  onClick={() => window.open("/files/mixagro.pdf", "_blank")}
+                />
               </div>
             </div>
             <div className={styles.project_images}>

@@ -12,7 +12,10 @@ export default function Hero() {
         <Button
           text="Contato"
           onClick={() => {
-            console.log("teste");
+            window.open(
+              "https://wa.me/5511954930363?text=Ol%C3%A1+Welington%2C+peguei+seu+contato+atrav%C3%A9s+do+seu+portf%C3%B3lio.",
+              "_blank"
+            );
           }}
           data-aos="fade-up-right"
         />

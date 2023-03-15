@@ -73,3 +73,35 @@
     border-radius: 4px;
     color: black;
 }
+
+@media only screen and (max-width: 600px) {
+    .projects {
+    }
+    .project {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 24px;
+        padding: 40px 16px;
+    }
+
+    .project_content {
+        width: 100%;
+        align-items: center;
+    }
+
+    .project_content_tasks {
+        text-align: center;
+    }
+
+    .project_images {
+        width: 100%;
+    }
+
+    .project_content_title > h2 {
+        text-align: center;
+    }
+
+    .project_content_title > h4 {
+        text-align: center;
+    }
+}
